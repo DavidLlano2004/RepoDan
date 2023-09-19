@@ -1,0 +1,245 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    background: url('../../public/images/bg_free_diving.svg') no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+:root{
+    --blue-light:#00A7FF;
+    --white:#FFFDFE;
+    --gray-light:#ACB4C9;
+}
+.container{
+    width: 80%;
+
+}
+
+.container header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img{
+    margin-right: 20px;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding-inline-start: 0;
+    /* display: none; */
+
+}
+header nav ul:nth-child(1){
+    gap: 40px;
+
+}
+li{
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+}
+li:hover{
+    color: #00000080;
+}
+
+header nav ul:nth-child(2) {
+    gap: 18px;
+}
+header nav ul:nth-child(2) li{
+    width: 50px;
+    gap: 10px;
+}
+header nav ul:nth-child(2) li:first-child{
+    border-right: 2px solid var(--blue-light);
+}
+article{
+    margin-bottom: 70px;
+}
+article h1{
+    color: var(--white);
+    font-size: clamp(30px,6vw,40px);
+    font-weight: bold;
+    margin: 10px;
+    
+}
+article p{
+    color: var(--gray-light); 
+    font-size:clamp(16px,2vw,20px) ;
+}
+article .title{
+    border-bottom: 2px solid var(--blue-light);
+    width: 50%;
+    text-align: center;
+}
+article .text{
+    width: 40%;
+    padding: 26px;
+}
+article .title_text{
+    display: grid;
+    text-align: center;
+    place-items: center;
+}
+article .title_text .line_h1{
+    display: flex;
+    align-items: center;
+}
+article .title_text .line_h1 .line{
+    border: 2px solid var(--blue-light);
+    height: 0;
+    width: 10vw;
+}
+article .container_images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+article .container_images .images:hover{
+    transition: all .5s ease;
+    transform: scale(1.1);
+}
+
+article .container_images .images{
+    height: 350px;
+    width: 250px;
+    box-shadow: 5px 5px 10px 10px #00000080;
+    position: relative;
+}
+article .container_images .images h2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    border-bottom: 2px solid var(--blue-light);
+    width: 120px;
+}
+article .container_images .images:nth-child(1){
+    background: url('../../public/images/medusa.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+article .container_images .images:nth-child(2){
+    background: url('../../public/images/anemone.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+article .container_images .images:nth-child(3){
+    background: url('../../public/images/jellyfish.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+
+footer{
+    margin-top: 10rem;
+    padding-bottom: 14px;
+    text-align: center;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+}
+.menu{
+    display: none;
+}
+.hiden{
+    display: none;
+}
+@media (min-width:768px) {
+    header nav{
+        display: flex !important;
+    }
+    .btn_menu{
+        display: none !important;
+    }
+    .btn_menu_close{
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    article .title{
+        width: 100%;
+        text-align: center;
+    }
+    article .text{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+
+    }
+    /* header nav ul{
+        display: none;
+    } */
+    
+    header nav{
+        position: absolute;
+        height: 350px;
+        top: 100px;
+        background-color: white;
+        width: 80%;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 10px 0;
+        display: none;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li{
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20%;
+
+    }
+    header nav ul:nth-child(1){
+        gap: 30px;
+    }
+    header nav ul:nth-child(2) li{
+        background-color: var(--blue-light);
+        width: 100px;
+        padding: 5px;
+        border-radius: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+    header nav ul li img{
+        margin: 0;
+
+    }
+    
+    .menu{
+        display: block;
+    }
+}
